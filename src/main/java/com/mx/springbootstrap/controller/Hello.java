@@ -9,14 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class Hello {
-    @Value("${spring.mvc.static-path-pattern}")
-    String resourcesPath;
+//    @Value("${spring.mvc.static-path-pattern}")
+//    String resourcesPath;
 
     @GetMapping("/test")
     public String test() {
 
-        System.out.println(resourcesPath);
-
+//        System.out.println(resourcesPath);
         return "Hello world";
     }
 }
