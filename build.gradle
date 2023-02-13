@@ -45,16 +45,16 @@ dependencies {
 //    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
     implementation 'javax.servlet:jstl:1.2'
     implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
-
+    runtimeOnly 'mysql:mysql-connector-java'
     //log4j
-    implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
+    // https://mvnrepository.com/artifact/org.bgee.log4jdbc-log4j2/log4jdbc-log4j2-jdbc4.1
+    implementation group: 'org.bgee.log4jdbc-log4j2', name: 'log4jdbc-log4j2-jdbc4.1', version: '1.16'
 
     //for Db Connect -- 1
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-
     //for Db Connect -- 2
-    runtimeOnly 'com.microsoft.sqlserver:mssql-jdbc'
-
+    //runtimeOnly 'com.microsoft.sqlserver:mssql-jdbc'
+    //runtimeOnly 'com.mysql:mysql-connector-j'
     // MyBatis
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.0'
 //    implementation("org.mybatis:mybatis:3.4.5")
